@@ -3,9 +3,10 @@
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Page content by Austin Jennings, MSGT Candidate, UW-Tacoma. May 2018.
 -->
 <html>
-<<<<<<< HEAD
 	<head>
 		<title>It's Somebody's Fault</title>
 		<meta charset="utf-8" />
@@ -23,16 +24,17 @@
 						<h1>This is Somebody's Fault</h1>
 						<h2>How voter apathy fucked America.</h2>
 						<p>For a mapping assignment, we were asked to make an election story map.<br>
-						   We felt the most compelling story, with regards to the 2016 election, was that of voter apathy.<br>
-						   According to <a href="https://brilliantmaps.com/did-not-vote/" target="_blank">an article on Brilliant Maps</a>, Only 8 states (and DC), <br>
-						   had high enough voter turnouts to actually elect a presidential candidate.<br> In short—<strong>if 'Did Not Vote' had run, they would have won by a landslide.</strong><br>
+						   We felt the most compelling story, with regards to the 2016 election, was that of voter apathy,
+						   According to <a href="https://brilliantmaps.com/did-not-vote/" target="_blank">an article on Brilliant Maps</a>, Only 8 states (and DC),
+						   had high enough voter turnouts to actually elect a presidential candidate.
+						   In short—<strong>if 'Did Not Vote' had run, they would have won by a landslide.</strong>
 						   This demonstrates how large an impact that voter turnout has on the
-						   results of a US Presidential election.<br>
+						   results of a US Presidential election.
 						   Check out our map below to learn which age groups and precincts had the largest numbers of non-voters.<br><br>
-						   We use a bivariate choropleth map to show election results by county, and a mapping technique<br>
-						   called value-by-alpha (VBA) to adjust the color intensity based on the number of non-voters.<br>
-						   The color (hue) shows the election result, and the more intense colors represent precincts<br>
-						   with the highest number of laggards and layabouts.  The slider lets you see results by age<br>
+						   We use a bivariate choropleth map to show election results by county, and a mapping technique
+						   called value-by-alpha (VBA) to adjust the color intensity based on the number of non-voters.
+						   The color (hue) shows the election result, and the more intense colors represent precincts
+						   with the highest number of laggards and layabouts.  The slider lets you see results by age
 						   bracket so that you can see which generation fell asleep at the wheel. Murikah'.
 
 
@@ -59,66 +61,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-=======
-<head>
-    <meta charset='utf-8' />
-    <title>Change a map's style</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
-</head>
-<body>
-
-<style>
-    #menu {
-        position: absolute;
-        background: #fff;
-        padding: 10px;
-        font-family: 'Open Sans', sans-serif;
-    }
-</style>
-
-<div id='map'></div>
-<div id='menu'>
-    <input id='basic' type='radio' name='rtoggle' value='basic' checked='checked'>
-    <label for='basic'>basic</label>
-    <input id='streets' type='radio' name='rtoggle' value='streets'>
-    <label for='streets'>streets</label>
-    <input id='bright' type='radio' name='rtoggle' value='bright'>
-    <label for='bright'>bright</label>
-    <input id='light' type='radio' name='rtoggle' value='light'>
-    <label for='light'>light</label>
-    <input id='dark' type='radio' name='rtoggle' value='dark'>
-    <label for='dark'>dark</label>
-    <input id='satellite' type='radio' name='rtoggle' value='satellite'>
-    <label for='satellite'>satellite</label>
-</div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoia2JvZ3VlMTMiLCJhIjoiY2o4d2ZvZHdvMDd2MDMybnI1aW42aWM5byJ9.lxE22vAwA_PLMOVayYIh7w';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/kbogue13/cjhdnbshu26w12rqlav9z103j',
-    zoom: 3.5,
-    center: [-98.58, 39.83]
-});
-
-var layerList = document.getElementById('menu');
-var inputs = layerList.getElementsByTagName('input');
-
-function switchLayer(layer) {
-    var layerId = layer.target.id;
-    map.setStyle('mapbox://styles/mapbox/' + layerId + '-v9');
-}
-
-for (var i = 0; i < inputs.length; i++) {
-    inputs[i].onclick = switchLayer;
-}
-</script>
-
-</body>
->>>>>>> 5ff9626e35b2726873acb5a5e122f55260158ea6
 </html>
