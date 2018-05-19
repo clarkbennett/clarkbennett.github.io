@@ -1,63 +1,61 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-    <meta charset='utf-8' />
-    <title>Change a map's style</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
-</head>
-<body>
+	<head>
+		<title>It's Somebody's Fault</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
 
-<style>
-    #menu {
-        position: absolute;
-        background: #fff;
-        padding: 10px;
-        font-family: 'Open Sans', sans-serif;
-    }
-</style>
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
 
-<div id='map'></div>
-<div id='menu'>
-    <input id='basic' type='radio' name='rtoggle' value='basic' checked='checked'>
-    <label for='basic'>basic</label>
-    <input id='streets' type='radio' name='rtoggle' value='streets'>
-    <label for='streets'>streets</label>
-    <input id='bright' type='radio' name='rtoggle' value='bright'>
-    <label for='bright'>bright</label>
-    <input id='light' type='radio' name='rtoggle' value='light'>
-    <label for='light'>light</label>
-    <input id='dark' type='radio' name='rtoggle' value='dark'>
-    <label for='dark'>dark</label>
-    <input id='satellite' type='radio' name='rtoggle' value='satellite'>
-    <label for='satellite'>satellite</label>
-</div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiamVubmluYWoiLCJhIjoiY2poZGxnejZmMHBmdjMwdG4wc29xNHZ3ZSJ9.ql6WSXU-vVCRoo5FhFOCOQ';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/basic-v9',
-    zoom: 3.5,
-    center: [-98.58, 39.83]
-});
+				<!-- Intro -->
+					<div id="intro">
+						<h1>This is Somebody's Fault</h1>
+						<h2>How voter apathy fucked America.</h2>
+						<p>For a mapping assignment, we were asked to make an election story map.<br>
+						   We felt the most compelling story, with regards to the 2016 election, was that of voter apathy.<br>
+						   According to <a href="https://brilliantmaps.com/did-not-vote/" target="_blank">an article on Brilliant Maps</a>, Only 8 states (and DC), <br>
+						   had high enough voter turnouts to actually elect a presidential candidate.<br> In short—<strong>if 'Did Not Vote' had run, they would have won by a landslide.</strong><br>
+						   This demonstrates how large an impact that voter turnout has on the
+						   results of a US Presidential election.<br>
+						   Check out our map below to learn which age groups and precincts had the largest numbers of non-voters.<br><br>
+						   We use a bivariate choropleth map to show election results by county, and a mapping technique<br>
+						   called value-by-alpha (VBA) to adjust the color intensity based on the number of non-voters.<br>
+						   The color (hue) shows the election result, and the more intense colors represent precincts<br>
+						   with the highest number of laggards and layabouts.  The slider lets you see results by age<br>
+						   bracket so that you can see which generation fell asleep at the wheel. Murikah'.
 
-var layerList = document.getElementById('menu');
-var inputs = layerList.getElementsByTagName('input');
 
-function switchLayer(layer) {
-    var layerId = layer.target.id;
-    map.setStyle('mapbox://styles/mapbox/' + layerId + '-v9');
-}
+						<ul class="actions">
+							<li><a href="map.html" class="button fit">Find out which age group dropped the ball.</a></li>
+						</ul>
+					</div>
+			</div>
 
-for (var i = 0; i < inputs.length; i++) {
-    inputs[i].onclick = switchLayer;
-}
-</script>
 
-</body>
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; TGIS 505-Kinds (KB, FB, BC, AJ)</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
