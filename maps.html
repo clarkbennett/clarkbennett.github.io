@@ -40,10 +40,18 @@ Set Color:
     #menu {
         position: absolute;
         background: #CDCDCD;
+        width: 400px;
         padding: 10px;
         font-family: 'Nunito Sans', sans-serif;
     }
 
+    #key{
+        position: absolute;
+        bottom: 0;    
+        background: #CDCDCD;
+        padding: 10px;
+        font-family: 'Nunito Sans', sans-serif;
+    }
 </style>
 
 <div id='map'></div>
@@ -51,7 +59,7 @@ Set Color:
 <div id='menu'>
 <h2> Select an age group:</h2>
     <input id='jenninaj/cjhf752ix37bc2sphw9dpq59y' type='radio' name='rtoggle' value='jenninaj/cjhf752ix37bc2sphw9dpq59y'>
-    <label for='jenninaj/cjhf752ix37bc2sphw9dpq59y'>Age 18-34</label>
+    <label for='jenninaj/cjhf752ix37bc2sphw9dpq59y' checked='checked' >Age 18-34</label>
 
     <input id='jenninaj/cjhf7c5oz3j402spnz8vgam7w' type='radio' name='rtoggle' value='jenninaj/cjhf7c5oz3j402spnz8vgam7w'>
     <label for='jenninaj/cjhf7c5oz3j402spnz8vgam7w'>Age 35-54</label>
@@ -61,8 +69,11 @@ Set Color:
 
     <input id='jenninaj/cjhf7a6ga03212so2c3itcqvy' type='radio' name='rtoggle' value='jenninaj/cjhf7a6ga03212so2c3itcqvy'>
     <label for='jenninaj/cjhf7a6ga03212so2c3itcqvy'>Age 75+</label>
-
 </div>
+<div id='key'>
+    <h2> 2018 Election Result Map</h2>
+    <img src="images/ResultKey.png" height="250">
+<div>
 <script>
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVubmluYWoiLCJhIjoiY2poZGxnejZmMHBmdjMwdG4wc29xNHZ3ZSJ9.ql6WSXU-vVCRoo5FhFOCOQ';
