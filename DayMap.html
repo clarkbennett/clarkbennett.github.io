@@ -22,6 +22,7 @@
         width: 400px;
         padding: 10px;
         font-family: 'Nunito Sans', sans-serif;
+        font-size:150%
     }
     #key{
         position: absolute;
@@ -37,7 +38,7 @@
 
 <div id='key'>
     <h2> Travel Time (hour)</h2>
-    <img src="images/HourKey.png" height="50">
+    <img src="images/HourKey.png" height="100">
 <div>
 
 <script>
@@ -45,7 +46,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubmV0dC1jbGFyayIsImEiOiJjajkyeW9vdTEzbzljM
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/bennett-clark/cjhnlk4ul4yjs2rltiwbc646q',
-    zoom: 8,
+    zoom: 5,
     center: [-120.7401, 47.7511]
 });
 var layerList = document.getElementById('menu');
