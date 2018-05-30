@@ -1,8 +1,10 @@
+<!--Created by Austin Jennings using Mapbox GL, Mapbox Studio, and ArcGIS Online Proximity Tool-->
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Time Distance Analysis From Pinkerton</title>
+    <title>Vertical and Horizontal Walking Map (5 kmph)</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
@@ -16,7 +18,6 @@
 <body>
 
 <style>
-
     #menu {
         position: absolute;
         background: #CDCDCD;
@@ -24,42 +25,76 @@
         padding: 10px;
         font-family: 'Nunito Sans', sans-serif;
     }
+
     #key{
+        width: 300px;
         position: absolute;
         bottom: 0;    
-        background: #FFFFFF;
+        background: #CDCDCD;
         padding: 10px;
         font-family: 'Nunito Sans', sans-serif;
-        font-size:150%
     }
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 0px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 10%;
+}
+
+.right {
+  width: 90%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 </style>
 
 <div id='map'></div>
 
-
-<!--<div id='key'>
-    <h2> Travel Time (hour)</h2>
-    <img src="images/HourKey.png" height="200">
-<div>-->
-
+<div id='key'>
+    <h3> Walk Time From Pinkerton</h3>
+     <div class="row">
+        <div class="column left" style="background-color:#1b0129">&nbsp</div>
+        <div class="column right">&nbsp&nbsp&nbsp 0.5 hours</div>
+     </div>
+     <div class="row">
+        <div class="column left" style="background-color:#2d0444">&nbsp</div>
+        <div class="column right">&nbsp&nbsp&nbsp 1 hours</div>
+     </div>
+     <div class="row">
+        <div class="column left" style="background-color:#44135f">&nbsp</div>
+        <div class="column right">&nbsp&nbsp&nbsp 2 hours</div>
+     </div>
+     <div class="row">
+        <div class="column left" style="background-color:#5B2877">&nbsp</div>
+        <div class="column right">&nbsp&nbsp&nbsp 3 hours</div>
+     </div>
+     <div class="row">
+        <div class="column left" style="background-color:#764690">&nbsp</div>
+        <div class="column right">&nbsp&nbsp&nbsp 4 hours</div>
+     </div>
+     <div class="row">
+        <div class="column left" style="background-color:#956eaa">&nbsp</div>
+        <div class="column right">&nbsp&nbsp&nbsp 5 hours</div>
+     </div>
+ </div>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubmV0dC1jbGFyayIsImEiOiJjajkyeW9vdTEzbzljMnFvNGhkajVkZ2g0In0.SG_R8xqoxGzSyzgoOZ3_Bw';
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiamVubmluYWoiLCJhIjoiY2poZGxnejZmMHBmdjMwdG4wc29xNHZ3ZSJ9.ql6WSXU-vVCRoo5FhFOCOQ';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/bennett-clark/cjhnlk4ul4yjs2rltiwbc646q',
-    zoom: 5.5,
-    center: [-120.7401, 47.7511]
+    style: 'mapbox://styles/jenninaj/cjhsomqyc84yt2smz64exf3z2',
+    zoom: 8,
+    center: [-122.44, 47.25]
 });
-var layerList = document.getElementById('menu');
-var inputs = layerList.getElementsByTagName('input');
-function switchLayer(layer) {
-    var layerId = layer.target.id;
-    map.setStyle('mapbox://styles/' + layerId);
-}
-for (var i = 0; i < inputs.length; i++) {
-    inputs[i].onclick = switchLayer;
-}
-
 </script>
 
 </body>
+</html>
