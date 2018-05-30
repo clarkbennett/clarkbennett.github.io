@@ -16,6 +16,7 @@
 <body>
 
 <style>
+
     #menu {
         position: absolute;
         background: #CDCDCD;
@@ -36,10 +37,10 @@
 <div id='map'></div>
 
 
-<div id='key'>
+<!--<div id='key'>
     <h2> Travel Time (hour)</h2>
     <img src="images/HourKey.png" height="200">
-<div>
+<div>-->
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubmV0dC1jbGFyayIsImEiOiJjajkyeW9vdTEzbzljMnFvNGhkajVkZ2g0In0.SG_R8xqoxGzSyzgoOZ3_Bw';
@@ -58,7 +59,7 @@ function switchLayer(layer) {
 for (var i = 0; i < inputs.length; i++) {
     inputs[i].onclick = switchLayer;
 }
-
+map.legendControl.addLegend('<strong>My walk from the White House to the hill!</strong>');
 </script>
 
 </body>
